@@ -36,3 +36,21 @@ assert palindrome([1]) == True
 assert palindrome([]) == False
 assert palindrome([-1, 0, 1]) == False
 assert palindrome([-1, 0, -1]) == True
+
+
+
+def integer_palindrome(number: int) -> bool:
+    new_number = 0
+    tmp_number = number
+    while tmp_number > 0:
+        new_number = new_number * 10 + (tmp_number % 10)
+        tmp_number //= 10
+    return new_number == number
+
+
+assert integer_palindrome(123) == False
+assert integer_palindrome(121) == True
+assert integer_palindrome(12321) == True
+assert integer_palindrome(1221) == True
+assert integer_palindrome(321) == False
+assert integer_palindrome(1) == True
