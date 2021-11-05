@@ -31,44 +31,26 @@ from typing import List
 
 class Solution:
     def thirdMax(self, nums: List[int]) -> int:
-        ans = []
-        def merge(l, r):
-            left_start = 0
-            right_start = 0
-            res = []
-            while left_start < len(l) and right_start < len(r):
-                if l[left_start] < r[right_start]:
-                    res.append(l[left_start])
-                    left_start += 1
-                else:
-                    res.append(r[right_start])
-                    right_start += 1
+        min_val = float("-inf")
+        mid_val = float("-inf")
+        max_val = nums[0]
+        for val in nums:
+            if val > max_val:
+                min_val = mid_val
+                mid_val = max_val
+                max_val = val
+            elif mid_val < val < max_val:
+                min_val = mid_val
+                mid_val = val
+            elif min_val < val < mid_val:
+                min_val = val
+
+        return min_val if min_val != float("-inf") else max(max_val, mid_val, min_val)
 
 
-            while left_start < len(l):
-                res.append(l[left_start])
-                left_start += 1
-
-            while right_start < len(r):
-                res.append(r[right_start])
-                right_start += 1
-            
-            if len(res) >= 3:
-                return res[len(res) - 3:len(res)]
-
-            return res
-
-        for ix, val in enumerate(nums):
-            if ans and val not in ans:
-                ans = merge([val], ans)
-            if not ans:
-                ans.append(val)
-
-        if len(ans) < 3:
-            return max(ans)
-
-        return ans[0]
-
+arr = [1, 2]
+res = 2
+assert res == Solution().thirdMax(arr)
 
 arr = [3,2,1]
 res = 1
@@ -80,4 +62,8 @@ assert res == Solution().thirdMax(arr)
 
 arr = [2, 2, 3, 1]
 res = 1
+assert res == Solution().thirdMax(arr)
+
+arr = [3,3,4,3,4,3,0,3,3]
+res = 0
 assert res == Solution().thirdMax(arr)
