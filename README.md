@@ -16,4 +16,4 @@ Tasks:
 * 1051. Height Checker.py
 * 941. Valid Mountain Array.py
 * 485. Max Consecutive Ones.py
-* 1089. Duplicate Zeros.py
+* 1089. Duplicate Zeros.py # TODO  сделать space o(1)
