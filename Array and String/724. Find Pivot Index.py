@@ -36,17 +36,15 @@ from typing import List
 
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
-        P = []
-        P.append(0)
-        nums_len = len(nums)
-        ix = 1
-        while ix <= nums_len:
-            P.append(P[ix - 1] + nums[ix - 1])
-            ix += 1
+        total_sum = 0
+        for val in nums:
+            total_sum += val
         
-        for ix in range(len(nums)):
-            if P[ix] == P[len(P) - 1] - P[ix] - nums[ix]:
+        curr_sum = 0
+        for ix, val in enumerate(nums):
+            if total_sum - curr_sum - nums[ix] == curr_sum:
                 return ix
+            curr_sum += val
         
         return -1
 
