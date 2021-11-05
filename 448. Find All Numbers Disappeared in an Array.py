@@ -27,19 +27,16 @@ from typing import List
 
 class Solution:
     def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
-        min_val = 0
-        max_val = 1
         res = []
+        for ix, val in enumerate(nums):
+            ix = abs(val) - 1
+            if nums[ix] > 0:
+                nums[ix] *= -1
 
-        counter = set()
+        for i in range(len(nums)):
+            if nums[i] > 0:
+                res.append(i + 1)
 
-        for val in nums:
-            counter.add(val)
-
-        for val in range(1, len(nums) + 1):
-            if val not in counter:
-                res.append(val)
-        
         return res
 
 
