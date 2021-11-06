@@ -16,14 +16,17 @@ Tasks:
 * 1051 Height Checker.py
 * 941 Valid Mountain Array.py
 * 485 Max Consecutive Ones.py
-* **1089 Duplicate Zeros.py TODO**
+* 1089 Duplicate Zeros.py
 
 ## Array and String
 Tasks:
 * 724 Find Pivot Index.py
-* **747 Largest Number At Least Twice of Others.py TODO**
+* 747 Largest Number At Least Twice of Others.py
 * 66 Plus One.py
+* 28 Implement strStr().py
+* 14 Longest Common Prefix.py
 
 ## TODO
 * 747 - TODO решение без двух циклов: считать максимальное и второе максимальное
-* 1089 - # TODO  сделать space o(1)
+* 1089 - TODO  сделать space o(1)
+* 14 - TODO изучить решения https://leetcode.com/problems/longest-common-prefix/solution/
