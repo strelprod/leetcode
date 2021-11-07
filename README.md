@@ -25,8 +25,13 @@ Tasks:
 * 66 Plus One.py
 * 28 Implement strStr().py
 * 14 Longest Common Prefix.py
+* 167 Two Sum II - Input Array Is Sorted.py
+* 344 Reverse String.py
+* 561 Array Partition I.py
+* 209 Minimum Size Subarray Sum.py
 
 ## TODO
 * 747 - TODO решение без двух циклов: считать максимальное и второе максимальное
 * 1089 - TODO  сделать space o(1)
 * 14 - TODO изучить решения https://leetcode.com/problems/longest-common-prefix/solution/
+* 209 - TODO изучить решения https://leetcode.com/problems/minimum-size-subarray-sum/solution/
