@@ -34,6 +34,21 @@ class Solution:
 
 class Solution:
     def reverseWords(self, s: str) -> str:
+        res = []
+        word = []
+        for val in s:
+            if val != " ":
+                word.append(val)
+            elif word:
+                res.append("".join(word[::-1]))
+                word = []
+        if word:
+            res.append("".join(word[::-1]))
+        return " ".join(res)
+
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
         return " ".join([val[::-1] for val in s.split(" ")])
 
 
