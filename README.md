@@ -30,6 +30,7 @@ Tasks:
 * 561 Array Partition I.py
 * 209 Minimum Size Subarray Sum.py
 * 67 Add Binary.py
+* 189 Rotate Array.py
 
 ## TODO
 * 747 - TODO решение без двух циклов: считать максимальное и второе максимальное
