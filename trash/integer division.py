@@ -9,7 +9,7 @@ def division(number: int, by: int) -> int:
         number -= by
         if number >= 0:
             res += 1
-    return sign * res
+    return res if sign == 1 else -res
 
 
 assert division(6, -3) == 6 // -3
